@@ -4,5 +4,5 @@ Code and materials for the paper: Dubova, M., Moskvichev, A. & Goldstone, R. (20
 
 You can find the simulation data at the OSF page of the project: https://osf.io/wt6gj/ 
 
-See the 5-minute presentation of the project: ![Recordit GIF](https://github.com/blinodelka/Multiagent-Communication-Learning-in-Networks/blob/master/ICML_presentation.webm)
+See 5-minute presentation of the project (in the browser): https://github.com/blinodelka/Multiagent-Communication-Learning-in-Networks/blob/master/ICML_presentation.webm
 
