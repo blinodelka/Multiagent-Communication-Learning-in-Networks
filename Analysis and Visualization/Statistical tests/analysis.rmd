@@ -1,0 +1,83 @@
+---
+title: "ICML workshop"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r libraries, include=FALSE}
+library(ggplot2)
+library(plyr)
+library(dplyr)
+
+library(geepack) # For GEE mixed effects models
+library(ngram) # For word counting
+
+library(car)
+
+source("./Stat211Functions.R")
+```
+
+## Experiment 2
+
+### Listener consistency
+
+```{r}
+exp2 = read.csv("./networks_er.csv")
+exp2$average.degree = as.numeric(exp2$average.degree)
+
+cons_on_sup_deg = glm(listener.consistency ~ average.degree + supervision.rate, family=gaussian, data=exp2)
+
+robust.se.glm(cons_on_sup_deg)
+#summary(cons_on_sup_deg)
+
+```
+
+### Speaker consistency
+
+```{r}
+
+sp_cons_on_sup_deg = glm(speaker.consistency ~ average.degree + supervision.rate, family=gaussian, data=exp2)
+
+robust.se.glm(sp_cons_on_sup_deg)
+#summary(sp_cons_on_sup_deg)
+
+```
+
+# Experiment 3
+
+
+## Meaning map
+```{r}
+exp3 = read.csv("./networks_global_local.csv")
+meaning_map = glm(meaning.mapping ~ p.global.connection + supervision.rate, family=gaussian, data=exp3)
+
+robust.se.glm(meaning_map)
+#summary(meaning_map)
+
+```
+
+
+## Meaning divergence
+```{r}
+exp3 = read.csv("./networks_global_local.csv")
+meaning_d = glm(meaning.divergence ~ p.global.connection + supervision.rate, family=gaussian, data=exp3)
+
+robust.se.glm(meaning_d)
+#summary(meaning_d)
+
+```
+
+## Talking divergence
+
+```{r}
+exp3 = read.csv("./networks_global_local.csv")
+talking_d = glm(talking.divergence ~ p.global.connection + supervision.rate, family=gaussian, data=exp3)
+
+robust.se.glm(talking_d)
+#summary(talking_d)
+
+```
