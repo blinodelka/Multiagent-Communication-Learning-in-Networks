@@ -4,4 +4,5 @@ Code and materials for the paper: Dubova, M., Moskvichev, A. & Goldstone, R. (20
 
 You can find the simulation data at the OSF page of the project: https://osf.io/wt6gj/ 
 
-See the 5-minute presentation: 
+See the 5-minute presentation of the project: ![Recordit GIF](https://www.youtube.com/watch?v=vFf62zLkAj0&feature=emb_title)
+
